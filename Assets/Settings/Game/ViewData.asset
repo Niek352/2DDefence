@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 897c0baf6df84fb4b02980371e403abc, type: 3}
+  m_Name: ViewData
+  m_EditorClassIdentifier: 
+  _entityViews:
+  - EntityView: {fileID: -8544062533003279327, guid: 371ec9362425aa047b55785dca2f0b3b, type: 3}
+    Id: Square
+  - EntityView: {fileID: -8544062533003279327, guid: 83768cdb3fa29ed4583f7e8987eec0f5, type: 3}
+    Id: Circule
