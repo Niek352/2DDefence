@@ -1,6 +1,6 @@
 ﻿using System;
 using Db.EnemyData;
-using Game.Enemy;
+using Game.View.Impl;
 
 namespace Game.Model
 {
@@ -9,8 +9,10 @@ namespace Game.Model
 	{
 		public float Damage;
 		public float Health;
+		public float AttackRange;
 		public EnemyAttackType EnemyAttackType;
 		public EnemyMovementType EnemyMovementType;
+		public EntityView EntityViewPrefab;
 	}
 		
 	public abstract class AbstractModel

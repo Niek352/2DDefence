@@ -21,7 +21,7 @@ namespace Game.Health.Impl
 		{
 			CurrentHealth -= damage;
 			CurrentHealth = Mathf.Clamp(CurrentHealth,0, MaxHealth);
-			Debug.Log(CurrentHealth);
+			
 			if (CurrentHealth == 0 && !IsDead)
 			{
 				IsDead = true;

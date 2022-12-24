@@ -2,6 +2,8 @@
 using Game.Factories.EnemyFactory.Impl;
 using Game.Factories.PlayerFactory;
 using Game.Factories.PlayerFactory.Impl;
+using Game.Factories.ViewFactory;
+using Game.Factories.ViewFactory.Impl;
 using Game.Services;
 using Game.Services.EnemyStorage;
 using Game.Services.EnemyStorage.Impl;
@@ -21,6 +23,7 @@ namespace Game.Installers
 		{
 			builder.Register<EnemyFactory>(Lifetime.Singleton).As<IEnemyFactory>();
 			builder.Register<PlayerFactory>(Lifetime.Singleton).As<IPlayerFactory>();
+			builder.Register<ViewFactory>(Lifetime.Singleton).As<IViewFactory>();
 			builder.Register<PlayerStorage>(Lifetime.Singleton).As<IPlayerStorage>();
 			builder.Register<EnemyStorage>(Lifetime.Singleton).As<IEnemyStorage>();
 			

@@ -6,6 +6,7 @@ using Game.Enemy.Attack.Impl;
 using Game.Enemy.Movement.Abstract;
 using Game.Enemy.Movement.Impl;
 using Game.Enemy.StateMachine;
+using Game.Factories.ViewFactory;
 using Game.Health.Impl;
 using Game.Model;
 using Game.Player;
@@ -19,18 +20,22 @@ namespace Game.Factories.EnemyFactory.Impl
 	{
 		private readonly IEnemyData _enemyData;
 		private readonly IPlayerStorage _playerStorage;
+		private readonly IViewFactory _viewFactory;
 
-		public EnemyFactory(IEnemyData enemyData, IPlayerStorage playerStorage)
+		public EnemyFactory(IEnemyData enemyData, IPlayerStorage playerStorage, IViewFactory viewFactory)
 		{
 			_enemyData = enemyData;
 			_playerStorage = playerStorage;
+			_viewFactory = viewFactory;
 		}
 		
 		public EnemyContext Create(EnemyModel model, Vector3 position, Quaternion rotation)
 		{
 			var enemy = Object.Instantiate(_enemyData.EnemyPrefab, position, rotation);
+			_viewFactory.CreateView(model.EntityViewPrefab.name, enemy.transform);
+			
 			var attack = CreateAttack(model.EnemyAttackType, model.Damage, _playerStorage.Player);
-			var movement = CreateMovement(model.EnemyMovementType, enemy, _playerStorage.Player);
+			var movement = CreateMovement(model, enemy, _playerStorage.Player);
 			
 			var health = new BaseHealth(model.Health);
 			var stateMachine = new EnemyStateMachine(enemy, attack, movement);
@@ -46,10 +51,10 @@ namespace Game.Factories.EnemyFactory.Impl
 			_ => throw new ArgumentOutOfRangeException(nameof(attackType), attackType, null)
 		};
 
-		private static AbstractMovement CreateMovement(EnemyMovementType movementType, EnemyContext enemyContext, PlayerContext player) => movementType switch
+		private static AbstractMovement CreateMovement(EnemyModel enemyModel, EnemyContext enemyContext, PlayerContext player) => enemyModel.EnemyMovementType switch
 		{
-			EnemyMovementType.SimpleMovement => new SimpleMovement(enemyContext, player),
-			_ => throw new ArgumentOutOfRangeException(nameof(movementType), movementType, null)
+			EnemyMovementType.SimpleMovement => new SimpleMovement(enemyContext, player, enemyModel.AttackRange),
+			_ => throw new ArgumentOutOfRangeException(nameof(enemyModel.EnemyMovementType), enemyModel.EnemyMovementType, null)
 		};
 	}
 }

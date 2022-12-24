@@ -16,16 +16,22 @@ MonoBehaviour:
   - Id: Bomb
     Damage: 10
     Health: 100
+    AttackRange: 1
     EnemyAttackType: 0
     EnemyMovementType: 0
+    EntityViewPrefab: {fileID: -8544062533003279327, guid: 83768cdb3fa29ed4583f7e8987eec0f5, type: 3}
   - Id: Ranger
     Damage: 10
     Health: 100
+    AttackRange: 5
     EnemyAttackType: 0
     EnemyMovementType: 0
+    EntityViewPrefab: {fileID: -8544062533003279327, guid: 371ec9362425aa047b55785dca2f0b3b, type: 3}
   - Id: Melee
     Damage: 10
     Health: 100
+    AttackRange: 1
     EnemyAttackType: 0
     EnemyMovementType: 0
+    EntityViewPrefab: {fileID: -8544062533003279327, guid: 371ec9362425aa047b55785dca2f0b3b, type: 3}
   _enemyContext: {fileID: 8439716014935526496, guid: 7a888e71c76e917409cc5c5ff04e109e, type: 3}
