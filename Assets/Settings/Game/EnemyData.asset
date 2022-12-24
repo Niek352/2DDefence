@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6c68e689f2c4cabaa943de8b73b00da, type: 3}
+  m_Name: EnemyData
+  m_EditorClassIdentifier: 
+  _enemyModels:
+  - Id: Bomb
+    Damage: 0
+    Health: 0
+    EnemyAttackType: 0
+    EnemyMovementType: 0
+  - Id: Ranger
+    Damage: 0
+    Health: 0
+    EnemyAttackType: 0
+    EnemyMovementType: 0
+  - Id: Melee
+    Damage: 0
+    Health: 0
+    EnemyAttackType: 0
+    EnemyMovementType: 0
+  _enemyContext: {fileID: 8439716014935526496, guid: 7a888e71c76e917409cc5c5ff04e109e, type: 3}
