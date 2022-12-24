@@ -14,18 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enemyModels:
   - Id: Bomb
-    Damage: 0
-    Health: 0
+    Damage: 10
+    Health: 100
     EnemyAttackType: 0
     EnemyMovementType: 0
   - Id: Ranger
-    Damage: 0
-    Health: 0
+    Damage: 10
+    Health: 100
     EnemyAttackType: 0
     EnemyMovementType: 0
   - Id: Melee
-    Damage: 0
-    Health: 0
+    Damage: 10
+    Health: 100
     EnemyAttackType: 0
     EnemyMovementType: 0
   _enemyContext: {fileID: 8439716014935526496, guid: 7a888e71c76e917409cc5c5ff04e109e, type: 3}

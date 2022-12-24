@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: GameScriptableInstaller
   m_EditorClassIdentifier: 
   _enemyData: {fileID: 11400000, guid: 787453e057254d34cae551ffeb661aff, type: 2}
+  _playerData: {fileID: 11400000, guid: 56981ccccc80f284a90ab50841c910c8, type: 2}

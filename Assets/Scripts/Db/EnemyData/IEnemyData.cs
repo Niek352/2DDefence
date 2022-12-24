@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
-using Enemy;
-using Model;
+using Game.Enemy;
+using Game.Model;
 
 namespace Db.EnemyData
 {

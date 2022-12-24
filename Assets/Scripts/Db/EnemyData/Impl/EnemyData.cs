@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
-using Enemy;
-using Model;
+using Game.Enemy;
+using Game.Model;
 using UnityEngine;
 
 namespace Db.EnemyData.Impl
 {
-	[CreateAssetMenu(menuName = "Settings/" + nameof(EnemyData), fileName = nameof(EnemyData), order = 0)]
+	[CreateAssetMenu(menuName = "Settings/" + nameof(EnemyData), fileName = nameof(EnemyData))]
 	public class EnemyData : ScriptableObject, IEnemyData
 	{
 		[SerializeField, InspectorName("Id")] private List<EnemyModel> _enemyModels;
