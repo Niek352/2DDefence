@@ -8,5 +8,7 @@ namespace Db.PlayerData
 		Vector3 PlayerSpawnPoint { get; }
 		PlayerContext PlayerPrefab { get; } 
 		float MaxHealth { get; } 
+		float RotationSpeed { get; }
+		string BulletId { get; }
 	}
 }

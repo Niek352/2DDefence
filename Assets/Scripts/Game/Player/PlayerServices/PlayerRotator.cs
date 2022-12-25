@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Game.Player
+namespace Game.Player.PlayerServices
 {
 	public class PlayerRotator : PlayerService, IPlayerUpdateService
 	{
@@ -19,9 +19,13 @@ namespace Game.Player
 
 		private void RotateToMouse(float deltaTime)
 		{
-			Vector2 dir = _camera.ScreenToWorldPoint(Input.mousePosition) - _playerContextTransform.position;
+			var dir = _camera.ScreenToWorldPoint(Input.mousePosition) - _playerContextTransform.position;
 			var targetRotation = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg - 90f;
-			_playerContextTransform.rotation = Quaternion.RotateTowards(_playerContextTransform.rotation, Quaternion.Euler(0,0,targetRotation), deltaTime * 360);
+			
+			_playerContextTransform.rotation = Quaternion.RotateTowards(
+				_playerContextTransform.rotation, 
+				Quaternion.Euler(0,0,targetRotation), 
+				deltaTime * (360f * PlayerContext.PlayerData.RotationSpeed));
 		}
 	}
 }

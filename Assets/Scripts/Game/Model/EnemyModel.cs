@@ -14,9 +14,4 @@ namespace Game.Model
 		public EnemyMovementType EnemyMovementType;
 		public EntityView EntityViewPrefab;
 	}
-		
-	public abstract class AbstractModel
-	{
-		public string Id;
-	}
 }

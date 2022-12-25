@@ -26,6 +26,7 @@ namespace Game.Health.Impl
 			{
 				IsDead = true;
 				OnDead?.Invoke(this);
+				OnDead = null;
 			}
 		}
 	}

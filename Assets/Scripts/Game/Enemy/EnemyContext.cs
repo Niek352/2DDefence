@@ -12,7 +12,8 @@ namespace Game.Enemy
 		private BaseHealth _baseHealth;
 		public IStateMachine StateMachine => _stateMachine;
 		public IHealth Health => _baseHealth;
-		
+		public Transform Transform => transform;
+
 		public void Init(EnemyStateMachine stateMachine, BaseHealth baseHealth)
 		{
 			_stateMachine = stateMachine;
