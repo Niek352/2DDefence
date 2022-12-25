@@ -42,6 +42,7 @@ namespace Game.Installers
 			builder.Register<EnemySpawnPointCalculateService>(Lifetime.Singleton).As<IEnemySpawnPointCalculateService>();
 			
 			
+			builder.RegisterEntryPoint<UiInitialize>();
 			builder.RegisterEntryPoint<EnemySpawner>();
 			builder.RegisterEntryPoint<EnemyCleanUp>().As<IEnemyCleanUp>();
 			builder.RegisterEntryPoint<BulletService>().As<IBulletService>();
