@@ -2,6 +2,8 @@
 using Db.BulletData.Impl;
 using Db.EnemyData;
 using Db.EnemyData.Impl;
+using Db.HealthViewData;
+using Db.HealthViewData.Impl;
 using Db.PlayerData;
 using Db.PlayerData.Impl;
 using Db.ViewData;
@@ -19,6 +21,7 @@ namespace Game.Installers
 		[SerializeField] private PlayerData _playerData;
 		[SerializeField] private ViewData _viewData;
 		[SerializeField] private BulletData _bulletData;
+		[SerializeField] private HealthViewData _healthView;
 		
 		public override void Install(IContainerBuilder builder)
 		{
@@ -26,6 +29,7 @@ namespace Game.Installers
 			builder.RegisterInstance(_playerData).As<IPlayerData>();
 			builder.RegisterInstance(_viewData).As<IViewData>();
 			builder.RegisterInstance(_bulletData).As<IBulletData>();
+			builder.RegisterInstance(_healthView).As<IHealthViewData>();
 		}
 	}
 }

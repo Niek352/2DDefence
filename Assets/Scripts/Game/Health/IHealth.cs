@@ -8,7 +8,8 @@ namespace Game.Health
 		public float MaxHealth { get; set; }
 		public bool IsDead { get; set; }
 		
-		public event Action<Impl.BaseHealth> OnDead;
+		public event Action<IHealth> OnDead;
+		public event Action<IHealth> OnHealthChanged;
 		void DecreaseHealth(float damage);
 	}
 }

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Game.Enemy;
 using Game.Services.CleanUp.Impl;
 
@@ -9,6 +10,7 @@ namespace Game.Services.EnemyStorage.Impl
 		private readonly IEnemyCleanUp _storageCleanUp;
 		private readonly HashSet<IEnemyContext> _enemies = new HashSet<IEnemyContext>();
 		public ICollection<IEnemyContext> Enemies => _enemies;
+		public event Action<IEnemyContext> OnCreate;
 
 		public EnemyStorage(IEnemyCleanUp storageCleanUp)
 		{
@@ -21,11 +23,11 @@ namespace Game.Services.EnemyStorage.Impl
 			_enemies.Remove(enemyContext);
 		}
 
-
 		public void AddToStorage(EnemyContext enemyContext)
 		{
 			_enemies.Add(enemyContext);
 			_storageCleanUp.ObserveEntityDeath(enemyContext);
+			OnCreate?.Invoke(enemyContext);
 		}
 	}
 }

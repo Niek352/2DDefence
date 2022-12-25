@@ -9,7 +9,8 @@ namespace Game.Health.Impl
 		public float MaxHealth { get; set; }
 		public bool IsDead { get; set; }
 		
-		public event Action<BaseHealth> OnDead; 
+		public event Action<IHealth> OnDead; 
+		public event Action<IHealth> OnHealthChanged; 
 
 		public BaseHealth(float maxHealth)
 		{
@@ -21,12 +22,13 @@ namespace Game.Health.Impl
 		{
 			CurrentHealth -= damage;
 			CurrentHealth = Mathf.Clamp(CurrentHealth,0, MaxHealth);
-			
+			OnHealthChanged?.Invoke(this);
 			if (CurrentHealth == 0 && !IsDead)
 			{
 				IsDead = true;
 				OnDead?.Invoke(this);
 				OnDead = null;
+				OnHealthChanged = null;
 			}
 		}
 	}
