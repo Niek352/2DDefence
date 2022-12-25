@@ -10,6 +10,7 @@ namespace Game.Model
 		public float Damage;
 		public float Health;
 		public float AttackRange;
+		public float MovementSpeed;
 		public EnemyAttackType EnemyAttackType;
 		public EnemyMovementType EnemyMovementType;
 		public EntityView EntityViewPrefab;

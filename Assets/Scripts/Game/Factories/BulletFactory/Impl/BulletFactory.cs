@@ -20,6 +20,7 @@ namespace Game.Factories.BulletFactory.Impl
 		{
 			var entityView = _viewFactory.CreateView(modelId, _bulletHolder);
 			entityView.transform.position = position;
+			entityView.transform.rotation = Quaternion.Euler(0,0,Mathf.Atan2(velocity.normalized.y, velocity.normalized.x) * Mathf.Rad2Deg - 90f);
 			return new BulletController(bulletModel.Damage, bulletTarget, position, entityView, velocity);
 		}
 	}

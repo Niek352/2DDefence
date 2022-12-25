@@ -15,3 +15,5 @@ MonoBehaviour:
   _playerSpawnPoint: {x: 0, y: 0, z: 0}
   _playerPrefab: {fileID: 6403745226456031651, guid: cee02b0fe9e790b4c873760f272f12ff, type: 3}
   _maxHealth: 100
+  _rotationSpeed: 1
+  _bulletId: PlayerBullet

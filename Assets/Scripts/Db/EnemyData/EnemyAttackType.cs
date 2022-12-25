@@ -1,7 +1,8 @@
 ﻿namespace Db.EnemyData
 {
-	public enum EnemyAttackType
+	public enum EnemyAttackType : byte
 	{
-		Melee
+		Melee,
+		Range
 	}
 }

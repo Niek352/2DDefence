@@ -9,6 +9,7 @@ namespace Game.Services.Bullet.Impl
 		public readonly EntityView View;
 		public readonly BulletTarget BulletTarget;
 		public readonly Vector3 Velocity;
+		public float LifeTime = 3f;
 		public Vector3 Position;
 		
 		public BulletController(int damage, BulletTarget bulletTarget, Vector3 position, EntityView view, Vector3 velocity)

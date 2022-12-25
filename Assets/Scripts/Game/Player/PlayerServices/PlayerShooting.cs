@@ -1,5 +1,6 @@
 ﻿using Game.Services.Bullet;
 using Game.Services.Bullet.Impl;
+using UnityEngine;
 
 namespace Game.Player.PlayerServices
 {
@@ -33,8 +34,8 @@ namespace Game.Player.PlayerServices
 			_bulletService.CreateBullet(
 				PlayerContext.PlayerData.BulletId,
 				BulletTarget.Enemy,
-				PlayerContext.Transform.position, 
-				PlayerContext.Transform.up);
+				PlayerContext.Transform.position + PlayerContext.Transform.rotation * new Vector3(0,1), 
+				PlayerContext.Transform.up * 10);
 		}
 	}
 }

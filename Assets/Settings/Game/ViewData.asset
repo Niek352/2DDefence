@@ -18,4 +18,6 @@ MonoBehaviour:
   - EntityView: {fileID: -8544062533003279327, guid: 83768cdb3fa29ed4583f7e8987eec0f5, type: 3}
     Id: Circule
   - EntityView: {fileID: 3877448003834814143, guid: 4ba7f41acd6bba8499a483ae62aaa1c6, type: 3}
-    Id: bulletView
+    Id: BulletView
+  - EntityView: {fileID: -8544062533003279327, guid: d3c319386286042498bcc1a4804322ee, type: 3}
+    Id: CirculeRange
