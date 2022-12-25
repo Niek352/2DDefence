@@ -17,3 +17,4 @@ MonoBehaviour:
   _viewData: {fileID: 11400000, guid: 09970d6a2c8e83647ae8d6af3628b8f6, type: 2}
   _bulletData: {fileID: 11400000, guid: fae9934ada74c804ab4f2ab3274fb0c7, type: 2}
   _healthView: {fileID: 11400000, guid: 4afe6e9552fa6c042bc8e1f4ef005ebd, type: 2}
+  _gameParameters: {fileID: 11400000, guid: dfe563eefcda4d240a987dd18adec9b1, type: 2}
