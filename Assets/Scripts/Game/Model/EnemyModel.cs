@@ -11,6 +11,7 @@ namespace Game.Model
 		public float Health;
 		public float AttackRange;
 		public float MovementSpeed;
+		public int ScorePoints;
 		public EnemyAttackType EnemyAttackType;
 		public EnemyMovementType EnemyMovementType;
 		public EntityView EntityViewPrefab;

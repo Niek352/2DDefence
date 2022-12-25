@@ -18,6 +18,7 @@ MonoBehaviour:
     Health: 25
     AttackRange: 1
     MovementSpeed: 3
+    ScorePoints: 5
     EnemyAttackType: 0
     EnemyMovementType: 0
     EntityViewPrefab: {fileID: -8544062533003279327, guid: 83768cdb3fa29ed4583f7e8987eec0f5, type: 3}
@@ -26,6 +27,7 @@ MonoBehaviour:
     Health: 50
     AttackRange: 5
     MovementSpeed: 2
+    ScorePoints: 5
     EnemyAttackType: 1
     EnemyMovementType: 0
     EntityViewPrefab: {fileID: -8544062533003279327, guid: d3c319386286042498bcc1a4804322ee, type: 3}
@@ -34,6 +36,7 @@ MonoBehaviour:
     Health: 75
     AttackRange: 1
     MovementSpeed: 1
+    ScorePoints: 7
     EnemyAttackType: 0
     EnemyMovementType: 0
     EntityViewPrefab: {fileID: -8544062533003279327, guid: 371ec9362425aa047b55785dca2f0b3b, type: 3}

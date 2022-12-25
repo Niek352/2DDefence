@@ -9,6 +9,7 @@ namespace Db.PlayerData
 		PlayerContext PlayerPrefab { get; } 
 		float MaxHealth { get; } 
 		float RotationSpeed { get; }
+		float BonusDamage { get; }
 		string BulletId { get; }
 	}
 }

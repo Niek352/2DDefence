@@ -35,7 +35,7 @@ namespace Game.Player.PlayerServices
 				PlayerContext.PlayerData.BulletId,
 				BulletTarget.Enemy,
 				PlayerContext.Transform.position + PlayerContext.Transform.rotation * new Vector3(0,1), 
-				PlayerContext.Transform.up * 10);
+				PlayerContext.Transform.up * 10, PlayerContext.PlayerData.BonusDamage);
 		}
 	}
 }

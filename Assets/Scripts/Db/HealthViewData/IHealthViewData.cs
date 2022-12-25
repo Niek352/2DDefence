@@ -1,4 +1,4 @@
-﻿using Game.Ui;
+﻿using Game.Ui.Controllers;
 
 namespace Db.HealthViewData
 {

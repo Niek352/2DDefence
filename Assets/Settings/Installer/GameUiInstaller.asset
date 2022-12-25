@@ -14,3 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _canvas: {fileID: 2400608841952711021, guid: 6221308270f53dc4f8b81d10eb2737c2, type: 3}
   _healthView: {fileID: 9114596156219885445, guid: 6a0d3e401915dd84c9c90bf153a48b03, type: 3}
+  _scoreView: {fileID: 6283288747200697444, guid: ed7c4a20d18a56448aed84c2093fa0a4, type: 3}
+  _sceneLoaderView: {fileID: 7781554122864685356, guid: 1810b571ca38ec4409a69f08a99f38c7, type: 3}
+  _looseView: {fileID: 5868079797051981476, guid: 34917238c5686e34ba7502d75b050fc6, type: 3}
+  _winView: {fileID: 2588627902704208419, guid: c0f1cf2342a2831449ce821ab7056cc8, type: 3}

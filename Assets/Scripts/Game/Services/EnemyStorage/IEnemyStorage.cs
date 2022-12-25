@@ -9,6 +9,7 @@ namespace Game.Services.EnemyStorage
 		ICollection<IEnemyContext> Enemies { get; }
 
 		event Action<IEnemyContext> OnCreate; 
+		event Action<IEnemyContext> OnDead; 
 		void AddToStorage(EnemyContext enemyContext);
 	}
 }

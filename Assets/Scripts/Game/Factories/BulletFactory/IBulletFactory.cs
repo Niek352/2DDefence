@@ -6,6 +6,6 @@ namespace Game.Factories.BulletFactory
 {
 	public interface IBulletFactory
 	{
-		BulletController CreateBullet(BulletModel bulletModel, string modelId, BulletTarget bulletTarget, Vector3 position, Vector3 velocity);
+		BulletController CreateBullet(BulletModel bulletModel, string modelId, BulletTarget bulletTarget, Vector3 position, Vector3 velocity, float bonusDamage);
 	}
 }

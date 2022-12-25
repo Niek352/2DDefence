@@ -1,4 +1,5 @@
 ﻿using Db.EnemyData;
+using Db.GameParameters;
 using Game.Factories.EnemyFactory;
 using Game.Model;
 using Game.Services.EnemySpawnPointCalculator;
@@ -14,20 +15,22 @@ namespace Game.Services.Spawner
 		private readonly IEnemyFactory _enemyFactory;
 		private readonly IEnemyStorage _enemyStorage;
 		private readonly IEnemySpawnPointCalculateService _calculateService;
+		private readonly IGameParameters _gameParameters;
 
 		private float _tick;
-		private const float DELAY = 2f;
 		
 		public EnemySpawner(
 			IEnemyData enemyData,
 			IEnemyFactory enemyFactory,
 			IEnemyStorage enemyStorage, 
-			IEnemySpawnPointCalculateService calculateService)
+			IEnemySpawnPointCalculateService calculateService,
+			IGameParameters gameParameters)
 		{
 			_enemyData = enemyData;
 			_enemyFactory = enemyFactory;
 			_enemyStorage = enemyStorage;
 			_calculateService = calculateService;
+			_gameParameters = gameParameters;
 		}
 		
 		public void FixedTick()
@@ -38,7 +41,7 @@ namespace Game.Services.Spawner
 		private void UpdateTimer(float deltaTime)
 		{
 			_tick += deltaTime;
-			if (_tick >= DELAY)
+			if (_tick >= _gameParameters.SpawnDelay)
 			{
 				_tick = 0;
 				SpawnEnemy();

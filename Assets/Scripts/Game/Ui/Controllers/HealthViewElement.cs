@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Game.Ui
+namespace Game.Ui.Controllers
 {
 	public class HealthViewElement : MonoBehaviour
 	{

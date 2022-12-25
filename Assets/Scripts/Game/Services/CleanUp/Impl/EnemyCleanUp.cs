@@ -1,6 +1,5 @@
-﻿using System;
-using Game.Enemy;
-using Object = UnityEngine.Object;
+﻿using Game.Enemy;
+using UnityEngine;
 
 namespace Game.Services.CleanUp.Impl
 {
@@ -10,11 +9,5 @@ namespace Game.Services.CleanUp.Impl
 		{
 			Object.Destroy(context.gameObject);
 		}
-	}
-
-	public interface IEnemyCleanUp
-	{
-		event Action<EnemyContext> OnCleanUp;
-		void ObserveEntityDeath(EnemyContext enemyContext);
 	}
 }

@@ -1,4 +1,5 @@
-﻿using Ui;
+﻿using Game.Ui.Controllers;
+using Ui;
 using VContainer;
 
 namespace Game.Ui
@@ -12,6 +13,7 @@ namespace Game.Ui
 		public override void AddControllers()
 		{
 			AddController<HealthController>();	
+			AddController<ScoreController>();	
 		}
 	}
 }

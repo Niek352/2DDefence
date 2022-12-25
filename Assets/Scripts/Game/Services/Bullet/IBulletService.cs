@@ -5,6 +5,6 @@ namespace Game.Services.Bullet
 {
 	public interface IBulletService
 	{
-		void CreateBullet(string id, BulletTarget bulletTarget, Vector3 position, Vector3 velocity);
+		void CreateBullet(string id, BulletTarget bulletTarget, Vector3 position, Vector3 velocity, float playerDataBonusDamage);
 	}
 }

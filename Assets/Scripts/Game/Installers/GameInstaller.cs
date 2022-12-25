@@ -6,6 +6,7 @@ using Game.Factories.PlayerFactory;
 using Game.Factories.PlayerFactory.Impl;
 using Game.Factories.ViewFactory;
 using Game.Factories.ViewFactory.Impl;
+using Game.MatchController;
 using Game.Services;
 using Game.Services.Bullet;
 using Game.Services.Bullet.Impl;
@@ -44,6 +45,7 @@ namespace Game.Installers
 			
 			builder.RegisterEntryPoint<UiInitialize>();
 			builder.RegisterEntryPoint<EnemySpawner>();
+			builder.RegisterEntryPoint<MatchController.Impl.MatchController>().As<IMatchController>();
 			builder.RegisterEntryPoint<EnemyCleanUp>().As<IEnemyCleanUp>();
 			builder.RegisterEntryPoint<BulletService>().As<IBulletService>();
 			builder.RegisterEntryPoint<PlayerControllerUpdateService>();

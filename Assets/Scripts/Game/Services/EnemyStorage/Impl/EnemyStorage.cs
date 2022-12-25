@@ -10,6 +10,7 @@ namespace Game.Services.EnemyStorage.Impl
 		private readonly IEnemyCleanUp _storageCleanUp;
 		private readonly HashSet<IEnemyContext> _enemies = new HashSet<IEnemyContext>();
 		public ICollection<IEnemyContext> Enemies => _enemies;
+		public event Action<IEnemyContext> OnDead;
 		public event Action<IEnemyContext> OnCreate;
 
 		public EnemyStorage(IEnemyCleanUp storageCleanUp)
@@ -20,6 +21,7 @@ namespace Game.Services.EnemyStorage.Impl
 		
 		private void OnCleanUp(EnemyContext enemyContext)
 		{
+			OnDead?.Invoke(enemyContext);
 			_enemies.Remove(enemyContext);
 		}
 

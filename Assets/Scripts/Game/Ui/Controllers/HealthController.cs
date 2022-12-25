@@ -9,7 +9,7 @@ using Ui;
 using UnityEngine;
 using VContainer.Unity;
 
-namespace Game.Ui
+namespace Game.Ui.Controllers
 {
 	public class HealthController : UiController<HealthView>, ITickable, IStartable
 	{

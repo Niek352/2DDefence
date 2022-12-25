@@ -35,10 +35,10 @@ namespace Game.Services.Bullet.Impl
 			_bulletModels = bulletData.BulletModels.ToDictionary(model => model.Id);
 		}
 		
-		public void CreateBullet(string id, BulletTarget bulletTarget, Vector3 position, Vector3 velocity)
+		public void CreateBullet(string id, BulletTarget bulletTarget, Vector3 position, Vector3 velocity, float bonusDamage)
 		{
 			var bulletModel = _bulletModels[id];
-			var bulletController = _bulletFactory.CreateBullet(bulletModel, bulletModel.View, bulletTarget, position, velocity);
+			var bulletController = _bulletFactory.CreateBullet(bulletModel, bulletModel.View, bulletTarget, position, velocity, bonusDamage);
 			_bulletControllers.Add(bulletController);
 		}
 		
@@ -64,7 +64,7 @@ namespace Game.Services.Bullet.Impl
 					
 					if (sqrMagnitude * sqrMagnitude <= 1f)
 					{
-						context.Health.DecreaseHealth(bulletController.Damage);
+						context.Health.DecreaseHealth(bulletController.Damage + bulletController.BonusDamage);
 						_destroyedBullets.Push(bulletController);
 						break;
 					}

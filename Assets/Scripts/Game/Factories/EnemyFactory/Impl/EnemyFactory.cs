@@ -47,7 +47,7 @@ namespace Game.Factories.EnemyFactory.Impl
 			var health = new BaseHealth(model.Health);
 			var stateMachine = new EnemyStateMachine(enemy, attack, movement);
 			
-			enemy.Init(stateMachine, health);
+			enemy.Init(stateMachine, health, model);
 
 			return enemy;
 		}
@@ -55,7 +55,7 @@ namespace Game.Factories.EnemyFactory.Impl
 		private AbstractAttack CreateAttack(EnemyAttackType attackType, float damage, PlayerContext player, EnemyContext owner) => attackType switch
 		{
 			EnemyAttackType.Melee => new MeleeAttack(damage, player),
-			EnemyAttackType.Range => new RangeAttack(_bulletService, owner),
+			EnemyAttackType.Range => new RangeAttack(_bulletService, owner, damage),
 			_ => throw new ArgumentOutOfRangeException(nameof(attackType), attackType, null)
 		};
 
