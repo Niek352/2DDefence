@@ -22,7 +22,7 @@ namespace Game.Player.PlayerServices
 			{
 				_currentCooldown += deltaTime;
 			}
-			else
+			else if (Input.GetMouseButton(0))
 			{
 				_currentCooldown = 0;
 				Shoot();
